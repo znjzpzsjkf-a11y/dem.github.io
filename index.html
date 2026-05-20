@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя презентация | Журнал работ</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --date-color: #888;
+            --code-bg: #2d2d2d;
+            --code-text: #f8f8f2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .entry-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .entry-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: #eef2f7;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .content-block {
+            margin-bottom: 15px;
+        }
+
+        /* Стили для ссылок-кнопок */
+        .file-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+        }
+
+        .btn img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Стили для блоков кода/данных */
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+        }
+
+        .data-tree {
+            font-family: monospace;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        /* Изображения в потоке */
+        .img-gallery {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .img-gallery img {
+            max-height: 150px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--date-color);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Журнал работ</h1>
+        <p>Хронология заданий и проектов</p>
+    </header>
+
+    <!-- 20 Мая -->
+    <div class="entry-card">
+        <span class="date-badge">20 Мая 2026</span>
+        <div class="file-links">
+            <a href="Zadanye25.docx" class="btn">📄 25 Заданий</a>
+        </div>
+    </div>
+
+    <!-- 13 Мая -->
+    <div class="entry-card">
+        <span class="date-badge">13 Мая 2026</span>
+        <div class="file-links">
+            <a href="SM.xlsx" class="btn">📊 С/Р</a>
+        </div>
+    </div>
+
+    <!-- 12 Мая -->
+    <div class="entry-card">
+        <span class="date-badge">12 Мая 2026</span>
+        <div class="file-links">
+            <a href="Dvoich.xlsx" class="btn">📊 Таблица двоичная</a>
+        </div>
+    </div>
+
+    <!-- 6 Мая -->
+    <div class="entry-card">
+        <span class="date-badge">6 Мая 2026</span>
+        <div class="content-block">
+            <p>Кроссворд и Георгиевская лента</p>
+        </div>
+        <div class="file-links">
+            <a href="Crossword.docx" class="btn">📝 Кроссворд</a>
+            <img src="georgievskaya.png" alt="Георгиевская лента" style="max-height: 50px; border-radius: 4px;">
+        </div>
+    </div>
+
+    <!-- 4 Мая -->
+    <div class="entry-card">
+        <span class="date-badge">4 Мая 2026</span>
+        <div class="file-links">
+            <a href="Таблица 3.xlsx" class="btn">📊 Таблица 3</a>
+        </div>
+    </div>
+
+    <!-- 29 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">29 Апреля 2026</span>
+        <div class="file-links">
+            <a href="таблица 1.xlsx" class="btn">📊 Таблица</a>
+        </div>
+    </div>
+
+    <!-- 17 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">17 Апреля 2026</span>
+        <div class="file-links">
+            <a href="Calc.ods" class="btn">📉 Calc</a>
+        </div>
+    </div>
+
+    <!-- 13 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">13 Апреля 2026</span>
+        <div class="img-gallery">
+            <a href="1medsestra.png"><img src="1medsestra.png" alt="Медсестра"></a>
+            <a href="1oper.png"><img src="1oper.png" alt="Опер"></a>
+            <a href="1vrach.png"><img src="1vrach.png" alt="Врач"></a>
+            <a href="Dvoich.png"><img src="Dvoich.png" alt="Двоичная"></a>
+            <a href="sestmomer1.png"><img src="sestmomer1.png" alt="Номер медсестра"></a>
+            <a href="vrnomer1.png"><img src="vrnomer1.png" alt="Номер врач"></a>
+        </div>
+        <div class="file-links">
+            <a href="1medsestra.png" class="btn">Медсестра</a>
+            <a href="1oper.png" class="btn">Опер</a>
+            <a href="1vrach.png" class="btn">Врач</a>
+            <a href="Dvoich.png" class="btn">Двоичная</a>
+        </div>
+    </div>
+
+    <!-- 8 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">8 Апреля 2026</span>
+        <div class="file-links">
+            <a href="Travma.png" class="btn">🖼️ Травма</a>
+            <a href="iER.png" class="btn">🖼️ Иерархия</a>
+        </div>
+    </div>
+
+    <!-- 6 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">6 Апреля 2026</span>
+        <div class="file-links">
+            <a href="Medsestra.png" class="btn">🖼️ Медсестра</a>
+        </div>
+    </div>
+
+    <!-- 4 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">4 Апреля 2026</span>
+        <div class="file-links">
+            <a href="Pacient.png" class="btn">🖼️ Пациент</a>
+        </div>
+    </div>
+
+    <!-- 1 Апреля -->
+    <div class="entry-card">
+        <span class="date-badge">1 Апреля 2026</span>
+        <h3>ДЕРЕВО ПАЦИЕНТОВ ПРИЁМНОГО ПОКОЯ</h3>
+        <div class="data-tree">
+            🆔 +7926A <br>
+            &nbsp;&nbsp;name: Иван Петров <br>
+            &nbsp;&nbsp;city: Москва <br>
+            &nbsp;&nbsp;street: Тверская <br>
+            &nbsp;&nbsp;age: 45 <br>
+            <br>
+            🆔 +7926B <br>
+            &nbsp;&nbsp;name: Анна Сидорова <br>
+            &nbsp;&nbsp;city: Санкт-Петербург <br>
+            &nbsp;&nbsp;street: Невский проспект <br>
+            &nbsp;&nbsp;age: 32 <br>
+            <br>
+            🆔 +7916C <br>
+            &nbsp;&nbsp;name: Дмитрий Козлов <br>
+            &nbsp;&nbsp;city: Екатеринбург <br>
+            &nbsp;&nbsp;age: 28 <br>
+        </div>
+    </div>
+
+    <!-- 31 Марта -->
+    <div class="entry-card">
+        <span class="date-badge">31 Марта 2026</span>
+        <div class="file-links">
+            <a href="Tabel.csv" class="btn">📄 Таблица (CSV)</a>
+            <a href="Derevo.png" class="btn">🖼️ Дерево приемного покоя</a>
+        </div>
+    </div>
+
+    <!-- 23 Марта -->
+    <div class="entry-card">
+        <span class="date-badge">23 Марта 2026</span>
+        <h3>Итоговые результаты (Нейросеть)</h3>
+        <pre>
+<b>Запуск 1:</b>
+Ошибка на обучении (MSE): 0.0204956282225906
+Ошибка на тесте (MSE): 0.028126417159993776
+
+<b>Запуск 2:</b>
+Ошибка на обучении (MSE): 0.018155439258763645
+Ошибка на тесте (MSE): 0.02573408308941174
+        </pre>
+        <p><i>Примечание: Алгоритм нейросети не интерпретирован на человеческом уровне.</i></p>
+    </div>
+
+    <!-- 21 Марта -->
+    <div class="entry-card">
+        <span class="date-badge">21 Марта 2026</span>
+        <p>Коэффициенты:</p>
+        <ul>
+            <li>0.69</li>
+            <li>0.905</li>
+        </ul>
+    </div>
+
+    <!-- 18 Марта -->
+    <div class="entry-card">
+        <span class="date-badge">18 Марта 2026</span>
+        <p>Студент занимался 5 часов.<br>
+        <b>Прогноз баллов: 45.02</b></p>
+    </div>
+
+    <!-- 7 Марта -->
+    <div class="entry-card">
+        <span class="date-badge">7 Марта 2026</span>
+        <div class="file-links">
+            <a href="Project/Presentation_Drawn_Cat.pptx" class="btn">🎨 Праздничная презентация 2</a>
+        </div>
+    </div>
+
+    <!-- 18 Февраля -->
+    <div class="entry-card">
+        <span class="date-badge">18 Февраля 2026</span>
+        <h3>Дешифровка текста (Python)</h3>
+        <pre>
+# Чтение из файла и расшифровка
+with open (r"/home/user/2025/201С/Enigme1.txt") as f:
+     encoded_data = f.read().strip()
+
+decoded_message = ''.join(chr(int(code)) for code in encoded_data.split())
+print (decoded_message)
+        </pre>
+        <blockquote>
+            "У каждого поколения есть свой философ, писатель или художник, который захватывает и воплощает в себе идею времени... У нашего поколения есть философ. Он не художник и не писатель. Он программист."
+        </blockquote>
+    </div>
+
+    <!-- 16 Февраля -->
+    <div class="entry-card">
+        <span class="date-badge">16 Февраля 2026</span>
+        <h3>Ответы модели (FAQ Bot)</h3>
+        <pre>
+Вопрос пользователя: Сколько ждать мой заказ?
+Найден FAQ-вопрос: Как быстро доставляется заказ? (sim=0.706)
+Ответ бот-FAQ: Наш стандартный срок доставки — 3–5 рабочих дней.
+
+Вопрос пользователя: Как оплатить заказ?
+Найден FAQ-вопрос: Как оплатить заказ? (sim=0.941)
+Ответ бот-FAQ: Оплатить заказ можно банковской картой, наличными курьеру или электронными деньгами.
+        </pre>
+    </div>
+
+    <!-- 21 Февраля -->
+    <div class="entry-card">
+        <span class="date-badge">21 Февраля 2026</span>
+        <h3>Решение задачи SEND + MORE = MONEY</h3>
+        <ol>
+            <li><b>Ключ кодировки:</b> [('D', 7), ('E', 5), ('M', 1), ('N', 6), ('O', 0), ('R', 8), ('S', 9), ('Y', 2)]</li>
+            <li><b>Числовая последовательность:</b> [9567, 1085, 10652]</li>
+            <li><b>Плоская кодировка:</b> [9, 5, 6, 7, 1, 0, 8, 5, 1, 0, 6, 5, 2]</li>
+            <li><b>Проверка:</b> 9567 + 1085 = 10652 ✅</li>
+        </ol>
+    </div>
+
+    <!-- 25 Февраля -->
+    <div class="entry-card">
+        <span class="date-badge">25 Февраля 2026</span>
+        <h3>Финансовые расчеты и округление</h3>
+        <p><b>№1 Разница с одной операции:</b> 0.0033333333 руб.<br>
+        Кража в день: 3333.33 руб.<br>
+        Кража за год: 1216666.67 руб.</p>
+        
+        <p><b>№2:</b> 0.008000000000000007</p>
+        
+        <p><b>№3 Сравнение методов округления:</b></p>
+        <pre>
+Честное округление (Random Error):
+4.162 -> 4.16 (остаток: +0.00200)
+4.168 -> 4.17 (остаток: -0.00200)
+4.174 -> 4.17 (остаток: +0.00400)
+4.179 -> 4.18 (остаток: -0.00100)
+
+Усечение / Truncation (Systematic Bias):
+4.162 -> 4.16 (остаток: +0.00200)
+4.168 -> 4.16 (остаток: +0.00800)
+4.174 -> 4.17 (остаток: +0.00400)
+4.179 -> 4.17 (остаток: +0.00900)
+        </pre>
+    </div>
+
+    <!-- Футер с общими ссылками -->
+    <div style="background: white; padding: 20px; border-radius: 10px; text-align: center; border: 2px dashed #ccc;">
+        <h3>Скачать материалы</h3>
+        <div class="file-links" style="justify-content: center;">
+            <a href="СетьВводный. pptx" class="btn">📥 Презентация (.pptx)</a>
+            <a href="index.html" class="btn">🌐 Файл проверки кириллицы (.html)</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Моя презентация. Все права защищены.</p>
+    </footer>
+</div>
+
+</body>
+</html>
